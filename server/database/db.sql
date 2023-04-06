@@ -1,0 +1,11 @@
+CREATE DATABASE tasksdb;
+
+CREATE TABLE tasks (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(30) UNIQUE NOT NULL,
+    descripion VARCHAR(30) NOT NULL,
+    status VARCHAR(30),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL
+);
+
+SELECT * FROM tasks;
